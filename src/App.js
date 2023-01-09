@@ -1,15 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
-import { useTranslation, Trans } from 'react-i18next';
+// import { Trans } from 'react-i18next';
 import { useState } from 'react';
+import { withTranslation } from 'react-i18next'
 
 const lngs = {
   en: { nativeName: 'English' },
   de: { nativeName: 'Deutsch' }
 }
 
-function App() {
-  const { t, i18n } = useTranslation()
+function App({ t, i18n }) {
   const [count, setCounter] = useState(0);
   return (
     <div className="App">
@@ -26,9 +26,10 @@ function App() {
           <i>{t('counter', { count })}</i>
         </p>
         <p>
-          <Trans i18nKey={"description.part1"}>
+          {/* <Trans i18nKey={"description.part1"}>
             Edit <code>src/App.js</code> and save to reload.
-          </Trans>
+          </Trans> */}
+          {t('description.part1')}
         </p>
         <a
           className="App-link"
@@ -43,4 +44,4 @@ function App() {
   );
 }
 
-export default App;
+export default withTranslation()(App);

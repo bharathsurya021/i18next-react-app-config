@@ -1,6 +1,11 @@
-# Getting Started with Create React App
+# Getting Started with React Translation App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Description
+
+In this project, i learnt how to internationalize an react app with multiple translation languages using i18next node packages module. It's a lightweight simple translation module with dynamic JSON storage. To load the translation from server i used i18next-http-backend which loads the translation from the default locales sub-directory inside public folder.
+Example folder structure: public/locales/en/translation.json
 
 ## Available Scripts
 
